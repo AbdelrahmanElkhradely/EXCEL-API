@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Route::get('/items/export/all', [ItemController::class,'export']);
-//Route::post('/items/import', [ItemController::class,'import']);
+
 Route::get('/items/export/all', [ItemController::class,'export']);
-Route::get('/items/import', [ItemController::class,'import']);
 
 Route::get('/', function () {
     return view('welcome');
