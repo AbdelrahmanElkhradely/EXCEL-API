@@ -7,19 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class Items extends Authenticatable implements JWTSubject
+class Admin extends Authenticatable implements JWTSubject
 {
     use HasFactory;
     protected $fillable=[
 
-        'Name',
-        'SerialNum',
-        'Quantity'
+        'name',
+        'email','password','updated_at','created_at'
     ];
-    protected $casts=[
-        'Quantity'=> 'integer'
-    ];
-
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *

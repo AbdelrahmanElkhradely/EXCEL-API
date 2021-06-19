@@ -22,12 +22,12 @@ class ItemsExport implements /* FromCollection ,*/ Responsable,ShouldAutoSize,Wi
     {
         $this->name = $name;
     }
-    /*
+
     public function collection()
     {
         return Items::all();
     }
-*/
+
     public function query()
     {
         return Items::query()->where('Name', $this->name);
